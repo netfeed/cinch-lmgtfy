@@ -1,6 +1,6 @@
 #!/usr/bin/env ruby
 # -*- coding: utf-8 -*-
-# Copyright (c) 2010 Victor Bergöö
+# Copyright (c) 2011 Victor Bergöö
 # This program is made available under the terms of the MIT License.
 
 require 'cinch'
