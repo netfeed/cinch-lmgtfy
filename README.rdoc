@@ -1,0 +1,43 @@
+= cinch-lmgtfy
+
+A simple plugin for the IRC-framework cinch to give lazy people a LMGTFY search.
+
+== Requirements
+
+The plugin requires a bit.ly[http://bit.ly] user and API-key and it also require's a curl installation.
+
+  sudo apt-get install curl
+  
+== Example bot
+
+  require 'cinch'
+  require 'cinch/plugins/lmgtfy'
+
+  bot = Cinch::Bot.new do
+    configure do |c|
+      c.nick = "Cinchbot"
+      c.server = "irc.freenode.org"
+      c.channels = ["#cinchbots"]
+      c.plugins.plugins = [Cinch::Plugins::LMGTFY]
+      c.plugins.options = {
+        Cinch::Plugins::LMGTFY => {
+          "username" => "SOME_USER",
+          "api_key" => "API_KEY"
+        }
+      }
+    end
+  end
+
+  bot.start
+
+To interact with the bot, just simply do
+
+  !google LazyUser how can i find foo
+
+== Notice
+
+This is just built for fun and I have no affiliation with the LMGTFY-team
+
+== Copyright
+
+Copyright (c) 2011 Victor Bergöö. See LICENSE for details.
