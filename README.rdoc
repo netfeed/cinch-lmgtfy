@@ -36,7 +36,7 @@ To interact with the bot, just simply do
 
 == Notice
 
-This is just built for fun and I have no affiliation with the LMGTFY-team
+This is just built for fun and I have no affiliation with the LMGTFY-team nor with Google
 
 == Copyright
 
