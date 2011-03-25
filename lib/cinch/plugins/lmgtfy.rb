@@ -19,6 +19,11 @@ module Cinch
       match /google ([^\s]*) (.*)/
       
       def execute m, user, query
+        if not config["username"] or not config["api_key"]
+          @bot.debug "either 'username' or 'api_key' is not set, please add these options"
+          return
+        end
+        
         search = LmgtfyUrl % [query.dup.gsub(/\s+/, "+")]
         short = ShortnerUrl % [config["username"], config["api_key"], URI.escape(search)]
         
