@@ -25,10 +25,9 @@ module Cinch
         call = Curl::Easy.perform(short)
         json = JSON.parse call.body_str
         
-        suffix =  m.user.nick[-1] == 's' ? "'" : "'s"
         if json["status_code"] == 200
           url = json["data"]["url"]
-          m.reply "#{user}#{suffix}: #{url}"
+          m.reply "#{user} check this out: #{url}"
         else 
           error = json["status_text"]
           m.reply "Something went wrong: #{error}"
