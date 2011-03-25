@@ -5,11 +5,11 @@
 
 Gem::Specification.new do |s|
   s.name = %q{cinch-lmgtfy}
-  s.version = "0.0.1"
+  s.version = "0.0.2"
 
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
   s.authors = ["Victor Bergoo"]
-  s.date = %q{2011-03-23}
+  s.date = %q{2011-03-26}
   s.description = %q{A Cinch plugin for Let Me Google That For You!}
   s.email = %q{victor.bergoo@gmail.com}
   s.extra_rdoc_files = [
