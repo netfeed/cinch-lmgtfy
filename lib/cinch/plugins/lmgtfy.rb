@@ -34,8 +34,8 @@ module Cinch
           url = json["data"]["url"]
           m.reply "#{user} check this out: #{url}"
         else 
-          error = json["status_text"]
-          m.reply "Something went wrong: #{error}"
+          error = json["status_txt"]
+          @bot.debug "Something went wrong: #{error}"
         end
       end
     end
